@@ -11,7 +11,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    
+    padding: 20px;
 }
 .tarjeta{
     display: grid;
@@ -22,6 +22,8 @@ body{
     min-height: 500px;
 }
 
+
+
 .tarjeta-imagen{
     background-image: url('/images/image-product-desktop.jpg');
     background-position: center center;
@@ -29,10 +31,14 @@ body{
     background-repeat: no-repeat;
     border-radius: 10px 0 0 10px;
 }
+
+
 .filtro-imagen{
     background-color: rgba(0, 0, 0, 0.1);
     width:100%;
     height: 100%;
+    border-radius: 10px 0 0 10px;
+
 }
 .tarjeta-informacion{ padding: 35px;}
 
@@ -65,7 +71,7 @@ body{
 .precio-actual{
     color: hsl(158, 36%, 37%);
     font-weight: bold;
-    font-size: 40px;
+    font-size: 35px;
     margin: 0;
     margin-right: 20px;
     font-family: 'Fraunces', serif;
@@ -91,9 +97,45 @@ body{
 
 
 }
+
+.btn-addCart:hover{
+    background-color:  hsl(158, 36%, 27%) ;
+    cursor: pointer;
+
+}
 .btn-addCart img{
     margin-right: 10px;
     height: 18px;
     
 }
 
+@media screen and (max-width : 700px) {
+    .tarjeta{
+        height: 600px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 70%;
+    }
+    
+    .tarjeta-imagen{
+        background-image: url('/images/image-product-mobile.jpg');
+    background-position: center top;
+        border-radius: 10px 10PX 0 0;
+
+    }
+    
+    .tarjeta-informacion{ padding: 20px;}
+
+.filtro-imagen{
+    border-radius: 10px 10PX 0 0;
+
+}
+
+.btn-addCart{
+    height: 45px;
+
+}
+
+.tarjeta-titulo{
+    font-size: 34px;
+}
+}
